@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Frases LMG</string>
+    <string name="et_email">Email</string>
+    <string name="et_pwd">Contraseña</string>
+    <string name="btn_acceder">Acceder</string>
+    <string name="btn_login">Registrarse</string>
+    <string name="btn_logout">Cerrar sesion</string>
+</resources>

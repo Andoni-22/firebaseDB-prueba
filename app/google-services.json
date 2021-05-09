@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464242911775",
+    "project_id": "frases-lmg",
+    "storage_bucket": "frases-lmg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464242911775:android:19cdcb616b6421c8ab832a",
+        "android_client_info": {
+          "package_name": "com.example.fraseslmg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464242911775-e6lvrtt5ondp982uva33t2ilr1tie2m8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA37bYFYsAiUoPICXu4Wx27Q0TbEpUmx4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464242911775-e6lvrtt5ondp982uva33t2ilr1tie2m8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
