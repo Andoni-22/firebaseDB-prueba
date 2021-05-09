@@ -1,11 +1,12 @@
 package com.example.fraseslmg;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ActionMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -110,7 +111,19 @@ public class AuthActivity extends AppCompatActivity {
      * en caso de que algo salga mal lanzaremos este metodo
      */
     private void showAlert() {
-        et_email.setError("Algo ha ido mal");
+        AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
+        dialogo1.setTitle("Error");
+        dialogo1.setMessage("Algo salio mal, compruebe sus credenciales");
+        dialogo1.setCancelable(false);
+        dialogo1.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+                dialogo1.dismiss();
+            }
+        });
+        dialogo1.show();
+        et_email.setText("");
+        et_email.requestFocus();
+        et_pwd.setText("");
     }
 
     /**

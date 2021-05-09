@@ -19,12 +19,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/et_email"
+        <TextView
+            android:id="@+id/tv_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:text="TextView" />
 
         <Button
             android:id="@+id/btn_logout"
