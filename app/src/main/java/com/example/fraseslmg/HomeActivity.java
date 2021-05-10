@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -92,7 +94,30 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void getUserData() {
-        
+        et_name.setText("");
+        et_apellidos.setText("");
+        et_municipio.setText("");
+        et_phone.setText("");
+        DocumentReference docRef = db.collection("users").document(user.getEmail().toString());
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        et_name.setText(document.get("name").toString());
+                        et_apellidos.setText(document.get("last_name").toString());
+                        et_municipio.setText(document.get("city").toString());
+                        et_phone.setText(document.get("phone").toString());
+                    } else {
+            
+                    }
+                } else {
+
+                }
+            }
+        });
+
     }
 
     private void setUserData() {
