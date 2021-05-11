@@ -2,7 +2,9 @@ package com.example.fraseslmg;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.media.session.MediaButtonReceiver;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button btn_logout;
     private Button btn_save;
     private Button btn_recover;
+    private Button btn_aux;
     private EditText et_name;
     private EditText et_apellidos;
     private EditText et_municipio;
@@ -53,6 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         btn_logout = (Button)findViewById(R.id.btn_logout);
         btn_save = (Button)findViewById(R.id.btn_save);
         btn_recover = (Button)findViewById(R.id.btn_recover);
+        btn_aux = (Button)findViewById(R.id.btn_aux);
         et_name = (EditText)findViewById(R.id.et_name);
         et_apellidos = (EditText)findViewById(R.id.et_apellidos);
         et_municipio = (EditText)findViewById(R.id.et_municipio);
@@ -91,6 +95,14 @@ public class HomeActivity extends AppCompatActivity {
                 getUserData();
             }
         });
+
+        btn_aux.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void getUserData() {
@@ -110,7 +122,7 @@ public class HomeActivity extends AppCompatActivity {
                         et_municipio.setText(document.get("city").toString());
                         et_phone.setText(document.get("phone").toString());
                     } else {
-            
+
                     }
                 } else {
 

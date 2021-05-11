@@ -12,4 +12,7 @@
     <string name="apellidos">Apellidos</string>
     <string name="municipio">Municipio</string>
     <string name="telefono">Telefono</string>
+    <string name="user">Usuario</string>
+    <string name="phrase">Frases</string>
+    <string name="group">Grupos</string>
 </resources>
