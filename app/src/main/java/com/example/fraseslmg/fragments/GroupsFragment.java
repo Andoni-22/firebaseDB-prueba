@@ -60,6 +60,10 @@ public class GroupsFragment extends Fragment {
         list.add(new Groups("Delirius papu", "papuuuuuu", R.drawable.ic_child_care_black_24dp));
         list.add(new Groups("KLK", "kukuxclan", R.drawable.ic_child_care_black_24dp));
         list.add(new Groups("motherfocker", "la madre de la foca", R.drawable.ic_child_care_black_24dp));
+        list.add(new Groups("Pap puto negro", "Jajajaj ya tu sabe", R.drawable.ic_child_care_black_24dp));
+        list.add(new Groups("Delirius papu", "papuuuuuu", R.drawable.ic_child_care_black_24dp));
+        list.add(new Groups("KLK", "kukuxclan", R.drawable.ic_child_care_black_24dp));
+        list.add(new Groups("motherfocker", "la madre de la foca", R.drawable.ic_child_care_black_24dp));
         return list;
     }
 

@@ -16,6 +16,8 @@ import com.example.fraseslmg.R;
  */
 public class PhrasesFragment extends Fragment {
 
+    private View root;
+
 
     public PhrasesFragment() {
         // Required empty public constructor
@@ -25,8 +27,10 @@ public class PhrasesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_phrases, container, false);
+        root = inflater.inflate(R.layout.fragment_phrases, container, false);
+
+        
+        return root;
     }
 
 }
