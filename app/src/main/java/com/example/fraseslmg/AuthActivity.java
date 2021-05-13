@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class AuthActivity extends AppCompatActivity {
+public class AuthActivity extends AppCompatActivity{
 
     private static final int RC_SIGN_IN = 1111;
     private EditText et_email;

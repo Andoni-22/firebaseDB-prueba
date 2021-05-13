@@ -11,10 +11,12 @@ import com.example.fraseslmg.fragments.GroupsFragment;
 import com.example.fraseslmg.fragments.PhrasesFragment;
 import com.example.fraseslmg.fragments.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MenuActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNav);
+        fab = (FloatingActionButton)findViewById(R.id.fab);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new PhrasesFragment()).commit();
