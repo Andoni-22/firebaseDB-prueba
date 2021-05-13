@@ -210,7 +210,10 @@ public class AuthActivity extends AppCompatActivity {
      */
     private void launchHome() {
         Toast.makeText(this,"Inicio de sesion correcto", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, HomeActivity.class);
+        //Intent intent = new Intent(this, HomeActivity.class);
+        //startActivity(intent);
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
+        finish();
     }
 }
