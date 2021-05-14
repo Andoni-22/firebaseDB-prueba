@@ -29,7 +29,7 @@ public class PhrasesFragment extends Fragment {
                              Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_phrases, container, false);
 
-        
+
         return root;
     }
 

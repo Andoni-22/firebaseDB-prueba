@@ -6,6 +6,8 @@ public class Users {
 
     private String id;
     private String name;
+    private String apellidos;
+    private int telefono;
     private String email;
     private Set<Phrases> phrases_list;
 
@@ -23,6 +25,22 @@ public class Users {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
     public String getEmail() {

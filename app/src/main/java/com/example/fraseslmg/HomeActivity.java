@@ -2,7 +2,6 @@ package com.example.fraseslmg;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.media.session.MediaButtonReceiver;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,8 +21,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -60,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
         et_name = (EditText)findViewById(R.id.et_name);
         et_apellidos = (EditText)findViewById(R.id.et_apellidos);
         et_municipio = (EditText)findViewById(R.id.et_municipio);
-        et_phone = (EditText)findViewById(R.id.et_phone);
+        et_phone = (EditText)findViewById(R.id.et_new_phone);
         tv_mail = (TextView) findViewById(R.id.tv_mail);
         user = FirebaseAuth.getInstance().getCurrentUser();
         mAuth = FirebaseAuth.getInstance();

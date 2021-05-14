@@ -8,6 +8,7 @@ public class Groups {
     private String name;
     private String desc;
     private int img;
+    private Users group_owner;
     private Set<Users> user_list;
     private Set<Phrases>phrases_list;
 
@@ -48,6 +49,14 @@ public class Groups {
 
     public void setImg(int img) {
         this.img = img;
+    }
+
+    public Users getUser() {
+        return group_owner;
+    }
+
+    public void setUser(Users group_owner) {
+        this.group_owner = group_owner;
     }
 
     public Set<Users> getUser_list() {

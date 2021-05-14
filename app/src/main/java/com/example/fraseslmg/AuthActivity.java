@@ -62,7 +62,9 @@ public class AuthActivity extends AppCompatActivity{
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                newUser();
+                //newUser();
+                Intent intent = new Intent(getApplicationContext(), NewUserActivity.class);
+                startActivity(intent);
             }
         });
 

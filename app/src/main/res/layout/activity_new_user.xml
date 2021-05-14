@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".NewUserActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -17,105 +17,80 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_mail"
+        <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="no"
-            android:text="TextView" />
+            android:ems="10"
+            android:hint="@string/et_email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_new_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_pwd"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/et_cfrm_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_pwd_repeat"
+            android:inputType="textPassword" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="24dp" />
 
         <EditText
-            android:id="@+id/et_name"
+            android:id="@+id/et_new_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="no"
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
-
         <EditText
-            android:id="@+id/et_apellidos"
+            android:id="@+id/et_new_apellidos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="no"
             android:ems="10"
             android:hint="@string/apellidos"
             android:inputType="textPersonName" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
-
-        <EditText
-            android:id="@+id/et_municipio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="no"
-            android:ems="10"
-            android:hint="@string/municipio"
-            android:inputType="textPersonName" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
 
         <EditText
             android:id="@+id/et_new_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="no"
             android:ems="10"
             android:hint="@string/telefono"
             android:inputType="phone" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="24dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_save"
+                android:id="@+id/btn_new"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_save" />
+                android:text="@string/btn_new_user" />
 
             <Button
-                android:id="@+id/btn_recover"
+                android:id="@+id/btn_abort"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_recover" />
-
+                android:text="@string/btn_abort" />
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
-
-        <Button
-            android:id="@+id/btn_logout"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_logout" />
-
-        <Button
-            android:id="@+id/btn_aux"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Open menu" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
