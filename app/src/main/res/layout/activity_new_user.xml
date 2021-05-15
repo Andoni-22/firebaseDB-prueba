@@ -69,6 +69,14 @@
             android:hint="@string/telefono"
             android:inputType="phone" />
 
+        <EditText
+            android:id="@+id/et_alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_alias"
+            android:inputType="textPersonName" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="24dp" />

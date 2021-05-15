@@ -107,7 +107,7 @@ public class HomeActivity extends AppCompatActivity {
         et_apellidos.setText("");
         et_municipio.setText("");
         et_phone.setText("");
-        DocumentReference docRef = db.collection("users").document(user.getEmail().toString());
+        DocumentReference docRef = db.collection("users").document(user.getEmail());
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {

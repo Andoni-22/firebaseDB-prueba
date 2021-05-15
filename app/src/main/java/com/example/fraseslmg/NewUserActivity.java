@@ -34,6 +34,8 @@ public class NewUserActivity extends AppCompatActivity{
     private EditText et_new_name;
     private EditText et_new_apellidos;
     private EditText et_new_phone;
+    private EditText et_alias;
+
 
     private Button btn_abort;
     private Button btn_new;
@@ -61,6 +63,7 @@ public class NewUserActivity extends AppCompatActivity{
         et_new_name = (EditText)findViewById(R.id.et_new_name);
         et_new_apellidos = (EditText)findViewById(R.id.et_new_apellidos);
         et_new_phone = (EditText)findViewById(R.id.et_new_phone);
+        et_alias = (EditText)findViewById(R.id.et_alias);
         btn_abort = (Button)findViewById(R.id.btn_abort);
         btn_new = (Button)findViewById(R.id.btn_new);
 
@@ -105,7 +108,7 @@ public class NewUserActivity extends AppCompatActivity{
     private void add_new_user() {
         if(et_email.getText().length() > 0 && et_new_pwd.getText().length() > 0
             && et_cfrm_pwd.getText().length() > 0 && et_new_name.getText().length() > 0
-            && et_new_apellidos.getText().length() > 0 && et_new_phone.getText().length() > 0){
+            && et_new_apellidos.getText().length() > 0 && et_new_phone.getText().length() > 0 && et_alias.getText().length() > 0){
             if(et_new_pwd.getText().toString().equalsIgnoreCase(et_cfrm_pwd.getText().toString())){
                 mAuth.createUserWithEmailAndPassword(et_email.getText().toString(), et_new_pwd.getText().toString())
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -116,6 +119,7 @@ public class NewUserActivity extends AppCompatActivity{
                                     object.put("name", et_new_name.getText().toString());
                                     object.put("last_name", et_new_apellidos.getText().toString());
                                     object.put("phone", et_new_phone.getText().toString());
+                                    object.put("username", et_alias.getText().toString());
 
                                     user = FirebaseAuth.getInstance().getCurrentUser();
 

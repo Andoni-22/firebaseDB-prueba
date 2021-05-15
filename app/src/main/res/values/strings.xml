@@ -3,6 +3,8 @@
     <string name="et_email">Email</string>
     <string name="et_pwd">Contraseña</string>
     <string name="et_pwd_repeat">Confirmar Contraseña</string>
+    <string name="et_alias">Nombre de usuario</string>
+
 
 
     <string name="btn_acceder">Acceder</string>
@@ -13,6 +15,7 @@
     <string name="btn_recover">Recuperar</string>
     <string name="btn_new_user">Nuevo usuario</string>
     <string name="btn_abort">Cancelar</string>
+    <string name="btn_edit">Editar</string>
 
     <string name="name">Nombre</string>
     <string name="apellidos">Apellidos</string>
